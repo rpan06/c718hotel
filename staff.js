@@ -1,8 +1,7 @@
 
 
 class Staff{
-	constructor(name, currentHotel){
-		this.name = name;
+	constructor(currentHotel){
 		this.busy = false;
 		this.hotel = currentHotel;
 	}
