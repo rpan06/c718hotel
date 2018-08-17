@@ -15,7 +15,8 @@ class Hotel{
 	}
 	//make a room and add to rooms array
 	addRoom(){
-
+			var newRoom = new Room( this );
+			this.rooms.push(newRoom); 
 	}
 	//add staff to the hotel
 	hireStaff( name ) {
