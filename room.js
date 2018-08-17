@@ -4,7 +4,10 @@ class Room {
 		this.hotel = currentHotel;
 	}
 	addOccupant(customer) {
-
+		this.occupant = customer;
+	}
+	checkIfOccupied() {
+		//return if occupied, false if not
 	}
 	removeOccupant() {
 
