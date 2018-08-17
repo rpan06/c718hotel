@@ -1,12 +1,12 @@
 
 
 class Staff{
-	constructor(name){
+	constructor(currentHotel){
 		this.busy = false;
-		this.hotel = null
+		this.hotel = currentHotel;
 	}
 	handleKitchenRequest(){
-		
+
 	}
 
 }
