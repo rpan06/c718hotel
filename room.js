@@ -5,13 +5,16 @@ class Room{
 		this.occupant = null; //a customer
 		this.hotel = currentHotel;
 	}
-	addOccupant( customer ){
+	addOccupant(customer) {
+		this.occupant = customer;
+	}
+	checkIfOccupied() {
+		//return if occupied, false if not
+	}
+	removeOccupant() {
 
 	}
-	removeOccupant(){
-
-	}
-	getRoomService(food){
+	getRoomService(food) {
 		this.hotel.getKitchenService();
 	}
 }
