@@ -1,8 +1,8 @@
 
 
 class Customer{
-	constructor( name ){
-		this.name = name;
+	constructor( customerName ){
+		this.name = customerName;
 		this.room = null; //room we are currently
 		this.isHungry = false;
 	}
@@ -10,6 +10,6 @@ class Customer{
 		this.room.getRoomService(food);
 	}
 	eat( food ){
-		
 	}
+		
 }

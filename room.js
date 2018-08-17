@@ -1,5 +1,7 @@
-class Room {
-	constructor(currentHotel) {
+
+
+class Room{
+	constructor(currentHotel){
 		this.occupant = null; //a customer
 		this.hotel = currentHotel;
 	}
