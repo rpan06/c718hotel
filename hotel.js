@@ -26,8 +26,14 @@ class Hotel{
 	getVacantRooms(){
 
 	}
-	getKitchenService(){
-		
+	getKitchenService( food, requestingRoom ){
+		for(let staffIndex = 0; staffIndex < this.staff.length; staffIndex++){
+			if(!this.staff[staffIndex].busy){
+				this.staff[staffIndex].handleKitchenRequest( food, requestingRoom );
+				return;
+			}
+		}
+		return console.warn('All staff are busy');
 	}
 
 }
