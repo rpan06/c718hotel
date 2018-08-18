@@ -15,6 +15,6 @@ class Room{
 
 	}
 	getRoomService(food) {
-		this.hotel.getKitchenService();
+		this.hotel.getKitchenService(food,this);
 	}
 }
