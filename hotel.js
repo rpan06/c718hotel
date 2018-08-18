@@ -22,8 +22,8 @@ class Hotel {
 
 	}
 	//add staff to the hotel
-	hireStaff(name, currentHotel) {
-		var newStaff = new Staff('bobby', this);
+	hireStaff() {
+		var newStaff = new Staff(this);
 		this.staff.push(newStaff)
 
 	}

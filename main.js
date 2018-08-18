@@ -10,3 +10,5 @@ var nameArray = ["Gerry", "Jon", "Rachel", "Mia"]
 for (var nameIndex = 0; nameIndex<4; nameIndex++){
     marriot.checkInCustomer(nameArray[nameIndex]);
 }
+
+marriot.hireStaff()
