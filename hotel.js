@@ -16,9 +16,6 @@ class Hotel {
 		}
 		
 	}
-	checkOutCustomer() {
-
-	}
 	//make a room and add to rooms array
 	addRoom(){
 			var newRoom = new Room( this );
