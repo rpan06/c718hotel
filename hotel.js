@@ -26,17 +26,15 @@ class Hotel {
 		var newStaff = new Staff( name )
 		this.staff.push(newStaff);
 	}
-
-	getKitchenService() {
-
-  }
-	checkForEmptyRoom(){
-		for(let checkIndex = 0; checkIndex < this.rooms.length; checkIndex++){
-			if(!this.rooms[checkIndex].checkIfOccupied){
-				return this.rooms[checkIndex];
+	getKitchenService( food, requestingRoom ){
+		for(let staffIndex = 0; staffIndex < this.staff.length; staffIndex++){
+			if(!this.staff[staffIndex].busy){
+				this.staff[staffIndex].handleKitchenRequest( food, requestingRoom );
+				return;
 			}
 		}
-		return console.warn('There are no empty rooms');
+		return console.warn('All staff are busy');
+
 	}
 
 }
