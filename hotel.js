@@ -22,10 +22,9 @@ class Hotel {
 
 	}
 	//add staff to the hotel
-	hireStaff() {
-		var newStaff = new Staff(this);
-		this.staff.push(newStaff)
-
+	hireStaff( name ) {
+		var newStaff = new Staff( name )
+		this.staff.push(newStaff);
 	}
 	getVacantRooms() {
 
