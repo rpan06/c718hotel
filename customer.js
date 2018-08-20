@@ -5,6 +5,7 @@ class Customer{
 		this.isHungry = false;
 		this.ThingsIveEaten = [];
 		this.AmIHungry = setInterval(this.checkIfHungry.bind(this), 10000);
+		//turn off amIHungry after room service is called. turn back on after eat is completed
 	}
 	assignRoom (room) {
 		this.room = room;
