@@ -25,9 +25,9 @@ class Customer{
 			this.orderRoomService("creme brulee");
 		}
 	}
-	checkOutOfRoom (room) {
-		this.room = room;
+	checkOutOfRoom () {
+		this.room = null;
 	}
-	//push
+	
 
 }
