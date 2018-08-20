@@ -11,6 +11,13 @@ class Room {
 	}
 	checkIfOccupied() {
 		//return if occupied, false if not
+		var isOccupied = null;
+		if(this.occupant){
+			isOccupied = true;
+		} else {
+			isOccupied = false;
+		}
+		return isOccupied;
 	}
 	removeOccupant() {
 		customer.checkOutOfRoom(this);
