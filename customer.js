@@ -10,6 +10,6 @@ class Customer{
 		this.room.getRoomService(food);
 	}
 	eat( food ){
+
 	}
-		
 }
