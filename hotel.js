@@ -1,7 +1,7 @@
 
 
-class Hotel{
-	constructor(){
+class Hotel {
+	constructor() {
 		this.name = 'marriot';
 		this.rooms = [];
 		this.staff = [];
@@ -10,21 +10,21 @@ class Hotel{
 	checkInCustomer( name ){
 		var newCustomer = new Customer( name );
 		this.rooms[0].addOccupant( newCustomer );
+
 	}
-	checkOutCustomer(){
+	checkOutCustomer() {
 
 	}
 	//make a room and add to rooms array
 	addRoom(){
 			var newRoom = new Room( this );
-			this.rooms.push(newRoom); 
+			this.rooms.push(newRoom);
+
 	}
 	//add staff to the hotel
 	hireStaff( name ) {
-
-	}
-	getVacantRooms(){
-
+		var newStaff = new Staff( name )
+		this.staff.push(newStaff);
 	}
 	getKitchenService( food, requestingRoom ){
 		for(let staffIndex = 0; staffIndex < this.staff.length; staffIndex++){
@@ -34,6 +34,7 @@ class Hotel{
 			}
 		}
 		return console.warn('All staff are busy');
+
 	}
 
 }
