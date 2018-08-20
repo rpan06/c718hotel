@@ -28,5 +28,6 @@ class Customer{
 	checkOutOfRoom (room) {
 		this.room = room;
 	}
+	//push
 
 }
