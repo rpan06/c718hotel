@@ -20,7 +20,7 @@ class Room {
 		return isOccupied;
 	}
 	removeOccupant() {
-		customer.checkOutOfRoom(this);
+		//this.occupant.checkOutOfRoom();
 		this.occupant = null;
 	}
 	getRoomService(food) {

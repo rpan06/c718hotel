@@ -1,12 +1,14 @@
-class Customer{
-	constructor( customerName ){
+class Customer {
+	constructor( customerName ) {
 		this.name = customerName;
-		this.room = null; //room we are currently
+		this.room = null;
 		this.isHungry = false;
-		this.thingsIveEaten = [];
-		this.amIHungry = setInterval(this.checkIfHungry.bind(this), 10000) //this should be 10000
+		this.ThingsIveEaten = [];
+		this.AmIHungry = setInterval(this.checkIfHungry.bind(this), 10000);
+		this.stayDuration = setInterval(this.checkOutOfRoom.bind(this),(Math.floor(Math.random() * 5) + 1)  * 60000);
+
 	}
-	assignRoom (room) {
+	assignRoom ( room ) {
 		this.room = room;
 	}
 	orderRoomService ( food ){
@@ -16,6 +18,7 @@ class Customer{
 	eat( food ){
 		console.log(this.name + " ate food.");
 		this.thingsIveEaten.push(food)
+
 		this.isHungry = false;
 		this.amIHungry = setInterval(this.checkIfHungry.bind(this), 10000);
 	}
@@ -30,6 +33,10 @@ class Customer{
 		console.log(this.isHungry);
 	}
 	checkOutOfRoom () {
-		this.room = null;
+		if (is.isHungry === false) {
+			room.removeOccupant();
+			this.room = null;
+			return this;
+		}
 	}
 }
