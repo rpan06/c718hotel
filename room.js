@@ -24,6 +24,7 @@ class Room {
 		this.occupant = null;
 	}
 	getRoomService(food) {
+		console.log("Room sent food request to the hotel.");
 		this.hotel.getKitchenService(food,this); //food from this room
 	}
 }

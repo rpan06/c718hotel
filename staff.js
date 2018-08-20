@@ -7,6 +7,7 @@ class Staff{
 		this.destination = null;
 	}
 	handleKitchenRequest(food,room){
+		console.log("Staff received food request.");
 		this.destination = room;
 		this.busy = true;
 		var cookingFoodTimer = Math.floor(Math.random() * 30000) //30000 is 30 seconds
@@ -15,6 +16,7 @@ class Staff{
 		setTimeout(boundFunction, cookingFoodTimer);
 	}
 	completeKitchenRequest(food){
+		console.log("Staff sent food to customer.");
 		this.destination.occupant.eat(food)
 		this.busy = false;
 	}

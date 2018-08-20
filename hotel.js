@@ -12,9 +12,10 @@ class Hotel {
 		for( let searchIndex = 0; searchIndex < this.rooms.length; searchIndex++){
 			if(!this.rooms[searchIndex].checkIfOccupied()){
 				this.rooms[searchIndex].addOccupant( newCustomer );
+				return;
 			}
 		}
-		
+
 	}
 	checkOutCustomer() {
 
@@ -31,6 +32,7 @@ class Hotel {
 		this.staff.push(newStaff);
 	}
 	getKitchenService( food, requestingRoom ){
+		console.log("Hotel sent food request to the staff.");
 		for(let staffIndex = 0; staffIndex < this.staff.length; staffIndex++){
 			if(!this.staff[staffIndex].busy){
 				this.staff[staffIndex].handleKitchenRequest( food, requestingRoom );

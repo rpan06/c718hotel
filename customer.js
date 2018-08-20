@@ -3,26 +3,31 @@ class Customer{
 		this.name = customerName;
 		this.room = null; //room we are currently
 		this.isHungry = false;
-		this.ThingsIveEaten = [];
-		this.AmIHungry = setInterval(this.checkIfHungry.bind(this), 10000);
-		//turn off amIHungry after room service is called. turn back on after eat is completed
+		this.thingsIveEaten = [];
+		this.amIHungry = setInterval(this.checkIfHungry.bind(this), 10000) //this should be 10000
 	}
 	assignRoom (room) {
 		this.room = room;
 	}
 	orderRoomService ( food ){
+		console.log(this.name + " ordered food.");
 		this.room.getRoomService(food);
 	}
 	eat( food ){
-		this.ThingsIveEaten.push(food)
+		console.log(this.name + " ate food.");
+		this.thingsIveEaten.push(food)
 		this.isHungry = false;
+		this.amIHungry = setInterval(this.checkIfHungry.bind(this), 10000);
 	}
 	checkIfHungry () {
-		var misoHungry = Math.floor(Math.random() * 20) + 1 
-		if (misoHungry === 1) {
+		var misoHungry = Math.floor(Math.random() * 2)  //result is either 0 or 1
+		if (misoHungry) {
 			this.isHungry = true;
+			console.log(this.name + " is hungry.");
+			clearInterval(this.amIHungry);
 			this.orderRoomService("creme brulee");
 		}
+		console.log(this.isHungry);
 	}
 	checkOutOfRoom () {
 		this.room = null;
