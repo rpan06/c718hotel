@@ -23,9 +23,6 @@ class Hotel{
 	hireStaff( name ) {
 
 	}
-	getVacantRooms(){
-
-	}
 	getKitchenService(){
 		
 	}
