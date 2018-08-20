@@ -30,3 +30,4 @@ class Hotel{
 	}
 
 }
+//checkin
