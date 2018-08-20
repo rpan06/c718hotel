@@ -1,5 +1,3 @@
-
-
 class Customer{
 	constructor( customerName ){
 		this.name = customerName;
